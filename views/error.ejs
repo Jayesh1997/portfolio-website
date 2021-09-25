@@ -3,6 +3,11 @@
 <%- include partials/main_nav.ejs %>
 
 <div class="container">
+    <style>
+        body {
+          background-image: url('Assets/images/background.jpg');
+          background-size: cover;
+        }</style>
     <h1><%= message %></h1>
     <h2><%= error.status %></h2>
     <pre><%= error.stack %></pre>
