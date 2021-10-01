@@ -118,6 +118,7 @@
 	transition: all 0.2s ease-in-out;
 	display: flex;
 	justify-content: center;
+	
 }
 
 .social-menu i:before {
