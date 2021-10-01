@@ -1,3 +1,4 @@
+/*  #Split window in two half  */
 .col-six, .col-1-2 {
     width: 50%;
 }
@@ -6,6 +7,7 @@
     width: 100%;
 }
 
+/*  #header  */
 .aboutHead{
    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;   
    text-align: center;
@@ -14,10 +16,13 @@
    
    text-shadow: 4px 4px 0px #928f8d, 7px 7px 0px rgba(0, 0, 0, 0.2);
 }
+
+/*  #header  */
 .workheader{  
    width: 300px;
    padding-left: 10rem;
 }
+/*  #timeline bullets  */
 .timeline__block {
     position: relative;
     padding-left: 5rem;
@@ -46,11 +51,8 @@
     margin-bottom: .9rem;
     font-family: "montserrat-bold", sans-serif;
 }
-/* ===================================================================
- * # buttons - (_buttons.scss)
- *
- * ------------------------------------------------------------------- */
 
+ /*  #buttons  */
  .btn, button, 
  input[type="submit"], 
  input[type="button"] {
