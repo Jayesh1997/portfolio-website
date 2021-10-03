@@ -1,3 +1,9 @@
+ /* File Name: about.css 
+    Student Name: Jayesh Dilip Amodkar
+    Student ID: 301211026
+    Date: 2/10/2021   
+ */
+ 
 /*  #Split window in two half  */
 .col-six, .col-1-2 {
     width: 50%;
@@ -65,7 +71,6 @@
      background-color: #070707;
      
  }
- 
  .btn:hover, button:hover, 
  input[type="submit"]:hover, 
  input[type="button"]:hover, 
@@ -78,31 +83,26 @@
      outline: 0;
     
  }
- 
  .btn.btn--primary, 
  button.btn--primary, 
  input[type="submit"].btn--primary, 
- input[type="button"].btn--primary {
-     
+ input[type="button"].btn--primary {    
      background: #0D0A0B;
      border-color: #0D0A0B;
      color: #FFFFFF;
      
  }
- 
- .btn.btn--primary:hover, 
+  .btn.btn--primary:hover, 
  button.btn--primary:hover, 
  input[type="submit"].btn--primary:hover, 
  input[type="button"].btn--primary:hover, 
  .btn.btn--primary:focus, 
  button.btn--primary:focus, 
  input[type="submit"].btn--primary:focus, 
- input[type="button"].btn--primary:focus {
-     
+ input[type="button"].btn--primary:focus {     
      background: #505152;
      
- }
- 
+ } 
  .btn.full-width, button.full-width {
      width: 30%;
      margin-left: 3;

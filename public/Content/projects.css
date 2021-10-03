@@ -1,3 +1,10 @@
+ /* File Name: project.css 
+    Student Name: Jayesh Dilip Amodkar
+    Student ID: 301211026
+    Date: 2/10/2021   
+ */
+
+/* Header content */
 .projectHead{
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;   
     text-align: center;
@@ -5,6 +12,8 @@
     text-rendering: optimizeLegibility; 
     text-shadow: 4px 4px 0px #928f8d, 7px 7px 0px rgba(0, 0, 0, 0.2);
  }
+
+ /* alignment */
  .col-six, .col-1-2 {
     width: 50%;
     padding-left: 2rem;

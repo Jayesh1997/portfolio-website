@@ -1,8 +1,14 @@
+ /* File Name: headerPg.css 
+    Student Name: Jayesh Dilip Amodkar
+    Student ID: 301211026
+    Date: 2/10/2021   
+ */
 
   p {
     font-family: "Dank Mono", ui-monospace, monospace;
   }
 
+  /* header Content */
   .header {
 	font-family: Futura, sans-serif;
 	font-weight: 100;

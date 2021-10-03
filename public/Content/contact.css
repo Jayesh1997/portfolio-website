@@ -1,4 +1,10 @@
+ /* File Name: contact.css 
+    Student Name: Jayesh Dilip Amodkar
+    Student ID: 301211026
+    Date: 2/10/2021   
+ */
 
+/* Contact form css */
 .form-style-5{
 	max-width: 500px;
 	padding: 10px 20px;
@@ -101,6 +107,7 @@
 	background: #414147	;
 }
 
+/* Social media icons */
 .social-menu {
 	display: flex;
 	list-style-type: none;		
