@@ -5,41 +5,40 @@ let mongoose = require('mongoose');
 let jwt = require('jsonwebtoken');
 
 // create a reference to the model
-let Book = require('../models/book');
+let Business = require('../models/business');
 
-module.exports.displayBookList = (req, res, next) => {
-    Book.find((err, bookList) => {
+module.exports.displayBusinessList = (req, res, next) => {
+    Business.find((err, businessList) => {
         if(err)
         {
             return console.error(err);
         }
+
         else
         {
-            //console.log(BookList);
+            //console.log(Business contact List);
 
-            res.render('book/list', 
-            {title: 'Books', 
-            BookList: bookList, 
+            res.render('business/list', 
+            {title: 'Business Contact', 
+            BusinessList: businessList, 
             displayName: req.user ? req.user.displayName : ''});      
         }
     });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('book/add', {title: 'Add Book', 
+    res.render('business/add', {title: 'Add Business contact', 
     displayName: req.user ? req.user.displayName : ''})          
 }
 
 module.exports.processAddPage = (req, res, next) => {
-    let newBook = Book({
-        "name": req.body.name,
-        "author": req.body.author,
-        "published": req.body.published,
-        "description": req.body.description,
-        "price": req.body.price
+    let newBusiness = Business({
+        "contact_name": req.body.name,
+        "contact_number": req.body.contact,
+        "email_address": req.body.email      
     });
 
-    Book.create(newBook, (err, Book) =>{
+    Business.create(newBusiness, (err, Business) =>{
         if(err)
         {
             console.log(err);
@@ -47,7 +46,7 @@ module.exports.processAddPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the Business contact list
             res.redirect('/business-contact-list');
         }
     });
@@ -57,7 +56,7 @@ module.exports.processAddPage = (req, res, next) => {
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
 
-    Book.findById(id, (err, bookToEdit) => {
+    Business.findById(id, (err, BusinessToEdit) => {
         if(err)
         {
             console.log(err);
@@ -66,7 +65,7 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the edit view
-            res.render('book/edit', {title: 'Edit Book', book: bookToEdit, 
+            res.render('business/edit', {title: 'Edit Business Contact', business: BusinessToEdit, 
             displayName: req.user ? req.user.displayName : ''})
         }
     });
@@ -75,16 +74,14 @@ module.exports.displayEditPage = (req, res, next) => {
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
 
-    let updatedBook = Book({
+    let updatedBusiness = Business({
         "_id": id,
-        "name": req.body.name,
-        "author": req.body.author,
-        "published": req.body.published,
-        "description": req.body.description,
-        "price": req.body.price
+        "contact_name": req.body.contact_name,
+        "contact_number": req.body.contact_number,
+        "email_address": req.body.email_address
     });
 
-    Book.updateOne({_id: id}, updatedBook, (err) => {
+    Business.updateOne({_id: id}, updatedBusiness, (err) => {
         if(err)
         {
             console.log(err);
@@ -92,7 +89,7 @@ module.exports.processEditPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the business contact list
             res.redirect('/business-contact-list');
         }
     });
@@ -101,7 +98,7 @@ module.exports.processEditPage = (req, res, next) => {
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
 
-    Book.remove({_id: id}, (err) => {
+    Business.remove({_id: id}, (err) => {
         if(err)
         {
             console.log(err);
@@ -109,7 +106,7 @@ module.exports.performDelete = (req, res, next) => {
         }
         else
         {
-             // refresh the book list
+             // refresh the business contact list
              res.redirect('/business-contact-list');
         }
     });
