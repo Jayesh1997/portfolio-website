@@ -33,9 +33,9 @@ module.exports.displayAddPage = (req, res, next) => {
 
 module.exports.processAddPage = (req, res, next) => {
     let newBusiness = Business({
-        "contact_name": req.body.name,
-        "contact_number": req.body.contact,
-        "email_address": req.body.email      
+        "contact_name": req.body.contact_name,
+        "contact_number": req.body.contact_number,
+        "email_address": req.body.email_address      
     });
 
     Business.create(newBusiness, (err, Business) =>{
