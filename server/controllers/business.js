@@ -17,7 +17,6 @@ module.exports.displayBusinessList = (req, res, next) => {
         else
         {
             //console.log(Business contact List);
-
             res.render('business/list', 
             {title: 'Business Contact', 
             BusinessList: businessList, 
@@ -65,7 +64,7 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the edit view
-            res.render('business/edit', {title: 'Edit Business Contact', business: BusinessToEdit, 
+            res.render('business/edit', {title: 'Edit Business Contact details', business: BusinessToEdit, 
             displayName: req.user ? req.user.displayName : ''})
         }
     });
