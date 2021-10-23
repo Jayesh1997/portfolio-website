@@ -16,7 +16,6 @@ module.exports.displayBusinessList = (req, res, next) => {
 
         else
         {
-            //console.log(Business contact List);
             res.render('business/list', 
             {title: 'Business Contact', 
             BusinessList: businessList, 
@@ -45,7 +44,7 @@ module.exports.processAddPage = (req, res, next) => {
         }
         else
         {
-            // refresh the Business contact list
+            // refresh business contact list
             res.redirect('/business-contact-list');
         }
     });
@@ -63,8 +62,8 @@ module.exports.displayEditPage = (req, res, next) => {
         }
         else
         {
-            //show the edit view
-            res.render('business/edit', {title: 'Edit Business Contact details', business: BusinessToEdit, 
+            //show edit view
+            res.render('business/edit', {title: 'Update Contact Details', business: BusinessToEdit, 
             displayName: req.user ? req.user.displayName : ''})
         }
     });
@@ -88,7 +87,7 @@ module.exports.processEditPage = (req, res, next) => {
         }
         else
         {
-            // refresh the business contact list
+            // refresh business contact list
             res.redirect('/business-contact-list');
         }
     });
@@ -105,7 +104,7 @@ module.exports.performDelete = (req, res, next) => {
         }
         else
         {
-             // refresh the business contact list
+             // refresh business contact list
              res.redirect('/business-contact-list');
         }
     });
